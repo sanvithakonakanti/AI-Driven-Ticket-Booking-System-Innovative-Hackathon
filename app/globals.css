@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: oklch(0.13 0.01 260);
+  --color-foreground: oklch(0.98 0 0);
+  --color-card: oklch(0.17 0.01 260);
+  --color-card-foreground: oklch(0.98 0 0);
+  --color-popover: oklch(0.17 0.01 260);
+  --color-popover-foreground: oklch(0.98 0 0);
+  --color-primary: oklch(0.65 0.2 25);
+  --color-primary-foreground: oklch(0.98 0 0);
+  --color-secondary: oklch(0.22 0.01 260);
+  --color-secondary-foreground: oklch(0.98 0 0);
+  --color-muted: oklch(0.25 0.01 260);
+  --color-muted-foreground: oklch(0.65 0 0);
+  --color-accent: oklch(0.75 0.15 55);
+  --color-accent-foreground: oklch(0.13 0 0);
+  --color-destructive: oklch(0.55 0.22 25);
+  --color-destructive-foreground: oklch(0.98 0 0);
+  --color-border: oklch(0.28 0.01 260);
+  --color-input: oklch(0.22 0.01 260);
+  --color-ring: oklch(0.65 0.2 25);
+  --color-chart-1: oklch(0.65 0.2 25);
+  --color-chart-2: oklch(0.75 0.15 55);
+  --color-chart-3: oklch(0.55 0.15 200);
+  --color-chart-4: oklch(0.7 0.12 140);
+  --color-chart-5: oklch(0.6 0.18 330);
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
+  --radius-xl: 1rem;
+  --color-sidebar: oklch(0.15 0.01 260);
+  --color-sidebar-foreground: oklch(0.98 0 0);
+  --color-sidebar-primary: oklch(0.65 0.2 25);
+  --color-sidebar-primary-foreground: oklch(0.98 0 0);
+  --color-sidebar-accent: oklch(0.22 0.01 260);
+  --color-sidebar-accent-foreground: oklch(0.98 0 0);
+  --color-sidebar-border: oklch(0.28 0.01 260);
+  --color-sidebar-ring: oklch(0.65 0.2 25);
+  --color-seat-available: oklch(0.55 0.15 200);
+  --color-seat-selected: oklch(0.65 0.2 25);
+  --color-seat-booked: oklch(0.35 0.01 260);
+  --color-seat-locked: oklch(0.75 0.15 55);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
